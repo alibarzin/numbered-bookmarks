@@ -1,126 +1,139 @@
-# Numbered Bookmarks for VS Code
+# 🔢 Numbered Bookmarks for VS Code
 
-A clean, lightweight Visual Studio Code extension that lets you **add and jump to numbered bookmarks (0–9)** using simple keyboard shortcuts. Perfect for developers who want a fast, predictable way to mark and return to important lines of code.
+A clean, fast, and reliable Visual Studio Code extension that lets you **add, remove, and jump to numbered bookmarks (0–9)** with simple keyboard shortcuts — just like in JetBrains Rider.
+Perfect for developers who want a **quick and precise way** to mark and navigate important code lines without losing focus.
 
 ---
 
 ## 🚀 Features
 
-* **Numbered bookmarks (0–9)** that you can set and jump to instantly.
-* **Cross-file support** – each bookmark remembers its file and exact position.
-* **Persistent bookmarks** stored per workspace.
-* **Fast navigation** with direct keyboard shortcuts (no command palette needed).
-* Optional **quick list** command to view all bookmarks at once.
+✅ **Toggle numbered bookmarks (0–9)** — add or remove with the same shortcut.
+✅ **Cross-file support** — each bookmark remembers its file and exact cursor position.
+✅ **Persistent per-workspace** — bookmarks are saved automatically.
+✅ **Quick navigation** — jump instantly without the command palette.
+✅ **Bookmark list** — view all bookmarks and jump to any of them in seconds.
 
 ---
 
 ## ⌨️ Default Keybindings
 
-| Action             | Windows / Linux         | macOS                  |
-| :----------------- | :---------------------- | :--------------------- |
-| **Add bookmark**   | `Ctrl + Alt + <number>` | `Cmd + Alt + <number>` |
-| **Go to bookmark** | `Ctrl + <number>`       | `Cmd + <number>`       |
+| Action              | Windows / Linux           | macOS                    |
+| :------------------ | :------------------------ | :----------------------- |
+| **Toggle bookmark** | `Ctrl + Shift + <number>` | `Cmd + Shift + <number>` |
+| **Go to bookmark**  | `Ctrl + <number>`         | `Cmd + <number>`         |
 
-Example:
+### Example
 
-* `Ctrl + Alt + 1` → Add bookmark 1 at current cursor.
-* `Ctrl + 1` → Jump to bookmark 1.
+* `Ctrl + Shift + 1` → Add or remove bookmark **#1** on current line.
+* `Ctrl + 1` → Instantly jump to bookmark **#1**.
 
-You can configure these in VS Code → **Keyboard Shortcuts** → search for *Numbered Bookmarks*.
+You can customize these shortcuts in:
+**File → Preferences → Keyboard Shortcuts** → search *Numbered Bookmarks*.
 
 ---
 
-## 🧭 Quick Commands
+## 🧭 Commands
 
-Command Palette → search for:
+Open **Command Palette (Ctrl + Shift + P)** and type:
 
-* **Add Bookmark N** → manually set a numbered bookmark.
-* **Go To Bookmark N** → jump to one.
-* **List Numbered Bookmarks** → view all bookmarks in a quick-pick menu.
+* `Numbered Bookmarks: Toggle Bookmark N` → Set or remove bookmark **N**.
+* `Numbered Bookmarks: Go To Bookmark N` → Jump to bookmark **N**.
+* `Numbered Bookmarks: List Bookmarks` → View all bookmarks in a quick-pick menu.
 
 ---
 
 ## 🧰 Installation
 
-### From VSIX
+### 🔹 From VSIX
 
-1. Run `npm install --global yo generator-code vsce` if not installed.
-2. Run `vsce package` inside the extension folder.
-3. Install with:
+1. Run:
+
+   ```bash
+   npm install --global yo generator-code vsce
+   ```
+2. Package your extension:
+
+   ```bash
+   vsce package
+   ```
+3. Install into VS Code:
 
    ```bash
    code --install-extension numbered-bookmarks-*.vsix
    ```
 
-### From Source
+### 🔹 From Source
 
-1. Clone or create via `yo code`:
+1. Clone or create via Yeoman:
 
    ```bash
    yo code
    ```
 
    Choose **New Extension (TypeScript)**.
-2. Replace files with the provided code.
-3. Run:
+2. Replace the generated code with this repository’s files.
+3. Compile and run:
 
    ```bash
    npm install
    npm run compile
    ```
-4. Press `F5` to launch an Extension Development Host and test.
+4. Press **F5** to open the Extension Development Host for testing.
 
 ---
 
 ## ⚙️ Configuration
 
-* Bookmarks are saved **per workspace**. If you prefer them to be global, change storage from `workspaceState` → `globalState` in `src/extension.ts`.
-* You can expand the keybinding range to more numbers or custom keys easily via `package.json`.
+* Bookmarks are stored **per workspace** (via `workspaceState`).
+  To make them **global**, switch to `globalState` in `src/extension.ts`.
+* Customize keybindings or add more numbers easily via `package.json`.
 
 ---
 
 ## 🧩 Example Workflow
 
-1. You’re debugging a complex function.
-2. You set `Ctrl + Alt + 1` at the function start.
-3. You scroll down 300 lines and set `Ctrl + Alt + 2` where the return statement is.
-4. Jump between them instantly with `Ctrl + 1` and `Ctrl + 2`.
+1. You set `Ctrl + Shift + 1` at the start of a long function.
+2. You add `Ctrl + Shift + 2` at the return statement.
+3. You jump between them instantly with `Ctrl + 1` and `Ctrl + 2`.
+4. Hit `Ctrl + Shift + 1` again to remove the bookmark when done.
 
-No more manual scrolling or temporary TODO comments.
+No more losing track or scrolling endlessly.
 
 ---
 
-## 💡 Ideas for Future Updates
+## 💡 Planned Improvements
 
-* Visual gutter markers next to bookmarked lines.
-* Syncing bookmarks across workspaces.
-* Labels or notes per bookmark.
+* 🔹 **Gutter icons** showing bookmarks like `[1]`, `[2]`, etc.
+* 🔹 **Notes per bookmark** (labels).
+* 🔹 **Global sync** between projects.
+* 🔹 **Multi-cursor bookmark jumping**.
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests and suggestions are always welcome.
-If you want to improve the UX (e.g., icons, per-file lists, or synchronization), open an issue or PR.
+Contributions are welcome!
+If you have suggestions, bug reports, or want to enhance the experience, open an issue or submit a PR.
 
 ---
 
 ## 🪶 License
 
-MIT License © 2025 — Your Name
+**MIT License** © 2025 — *Alireza Barzin*
 
 ---
 
 ## 📸 Preview (optional)
 
-Add a short GIF or screenshot showing setting and jumping to bookmarks:
-
 ```text
 [Editor screenshot]
-Ctrl + Alt + 3 → Bookmark added.
-Ctrl + 3 → Instantly jumps to it.
+Ctrl + Shift + 3 → Bookmark [3] added.
+Ctrl + 3 → Instantly jumps to bookmark [3].
+Ctrl + Shift + 3 → Bookmark [3] removed.
 ```
 
 ---
 
-Enjoy smooth and fast navigation with **Numbered Bookmarks** — because your code deserves precision, not scrolling.
+⚡ **Numbered Bookmarks** — simple, fast, and built for developers who hate losing their place.
+
+---
