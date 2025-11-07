@@ -1,7 +1,11 @@
-# 🔢 Numbered Bookmarks for VS Code
+# 🔢 Quick Numbered Bookmarks for VS Code
 
 A clean, fast, and reliable Visual Studio Code extension that lets you **add, remove, and jump to numbered bookmarks (0–9)** with simple keyboard shortcuts — just like in JetBrains Rider.
 Perfect for developers who want a **quick and precise way** to mark and navigate important code lines without losing focus.
+
+[![Version](https://img.shields.io/visual-studio-marketplace/v/AlirezaBarzin.quick-number-bookmarks?style=for-the-badge&label=VS%20Code%20Marketplace&color=blue)](https://marketplace.visualstudio.com/items?itemName=AlirezaBarzin.quick-number-bookmarks)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/AlirezaBarzin.quick-number-bookmarks?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=AlirezaBarzin.quick-number-bookmarks)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/AlirezaBarzin.quick-number-bookmarks?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=AlirezaBarzin.quick-number-bookmarks)
 
 ---
 
@@ -28,7 +32,7 @@ Perfect for developers who want a **quick and precise way** to mark and navigate
 * `Ctrl + 1` → Instantly jump to bookmark **#1**.
 
 You can customize these shortcuts in:
-**File → Preferences → Keyboard Shortcuts** → search *Numbered Bookmarks*.
+**File → Preferences → Keyboard Shortcuts** → search *Quick Numbered Bookmarks*.
 
 ---
 
@@ -36,46 +40,45 @@ You can customize these shortcuts in:
 
 Open **Command Palette (Ctrl + Shift + P)** and type:
 
-* `Numbered Bookmarks: Toggle Bookmark N` → Set or remove bookmark **N**.
-* `Numbered Bookmarks: Go To Bookmark N` → Jump to bookmark **N**.
-* `Numbered Bookmarks: List Bookmarks` → View all bookmarks in a quick-pick menu.
+* `Quick Numbered Bookmarks: Toggle Bookmark N` → Set or remove bookmark **N**.
+* `Quick Numbered Bookmarks: Go To Bookmark N` → Jump to bookmark **N**.
+* `Quick Numbered Bookmarks: List Bookmarks` → View all bookmarks in a quick-pick menu.
 
 ---
 
 ## 🧰 Installation
 
-### 🔹 From VSIX
+### 🔹 From VS Code Marketplace (Recommended)
 
-1. Run:
+1. Open **VS Code**
+2. Go to **Extensions** (Ctrl+Shift+X / Cmd+Shift+X)
+3. Search for **"Quick Numbered Bookmarks"**
+4. Click **Install**
 
+### 🔹 Quick Install
+Press `Ctrl+P` / `Cmd+P` and paste:
+```bash
+ext install AlirezaBarzin.quick-number-bookmarks
+```
+
+### 🔹 From VSIX (Alternative)
+
+1. Download the `.vsix` file from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=AlirezaBarzin.quick-number-bookmarks)
+2. Run in VS Code:
    ```bash
-   npm install --global yo generator-code vsce
+   code --install-extension quick-number-bookmarks-*.vsix
    ```
-2. Package your extension:
-
-   ```bash
-   vsce package
-   ```
-3. Install into VS Code:
-
-   ```bash
-   code --install-extension numbered-bookmarks-*.vsix
-   ```
+   Or use the **Extensions: Install from VSIX** command.
 
 ### 🔹 From Source
 
-1. Clone or create via Yeoman:
-
-   ```bash
-   yo code
-   ```
-
-   Choose **New Extension (TypeScript)**.
-2. Replace the generated code with this repository’s files.
-3. Compile and run:
-
+1. Clone the repository
+2. Install dependencies:
    ```bash
    npm install
+   ```
+3. Compile TypeScript:
+   ```bash
    npm run compile
    ```
 4. Press **F5** to open the Extension Development Host for testing.
@@ -85,7 +88,7 @@ Open **Command Palette (Ctrl + Shift + P)** and type:
 ## ⚙️ Configuration
 
 * Bookmarks are stored **per workspace** (via `workspaceState`).
-  To make them **global**, switch to `globalState` in `src/extension.ts`.
+* To make them **global**, switch to `globalState` in `src/extension.ts`.
 * Customize keybindings or add more numbers easily via `package.json`.
 
 ---
@@ -101,28 +104,34 @@ No more losing track or scrolling endlessly.
 
 ---
 
+## 📊 Marketplace
+
+**Available on VS Code Marketplace:**
+[https://marketplace.visualstudio.com/items?itemName=AlirezaBarzin.quick-number-bookmarks](https://marketplace.visualstudio.com/items?itemName=AlirezaBarzin.quick-number-bookmarks)
+
+⭐ **Love this extension?** Please consider leaving a rating and review on the marketplace!
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome!
 If you have suggestions, bug reports, or want to enhance the experience, open an issue or submit a PR.
 
+**Repository:** [https://github.com/alibarzin/numbered-bookmarks](https://github.com/alibarzin/numbered-bookmarks)
+
 ---
 
 ## 🪶 License
 
-**MIT License** © 2025 — *Alireza Barzin*
+**MIT License** © 2024 — *Alireza Barzin*
 
 ---
 
-## 📸 Preview (optional)
+## 🔄 Changelog
 
-```text
-[Editor screenshot]
-Ctrl + Shift + 3 → Bookmark [3] added.
-Ctrl + 3 → Instantly jumps to bookmark [3].
-Ctrl + Shift + 3 → Bookmark [3] removed.
-```
+See the [CHANGELOG.md](CHANGELOG.md) for what's new in each version.
 
 ---
 
-⚡ **Numbered Bookmarks** — simple, fast, and built for developers who hate losing their place.
+⚡ **Quick Numbered Bookmarks** — simple, fast, and built for developers who hate losing their place.
