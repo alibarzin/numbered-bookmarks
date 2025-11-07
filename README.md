@@ -101,15 +101,6 @@ No more losing track or scrolling endlessly.
 
 ---
 
-## 💡 Planned Improvements
-
-* 🔹 **Gutter icons** showing bookmarks like `[1]`, `[2]`, etc.
-* 🔹 **Notes per bookmark** (labels).
-* 🔹 **Global sync** between projects.
-* 🔹 **Multi-cursor bookmark jumping**.
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome!
