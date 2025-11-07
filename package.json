@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/alibarzin/numbered-bookmarks"
   },
+  "icon": "resources/icon.png",
   "categories": [
     "Other"
   ],
